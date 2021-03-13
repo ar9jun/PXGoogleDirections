@@ -10,11 +10,17 @@ import Foundation
 import UIKit
 
 /// A type of vehicle used on a specific line
-public struct PXGoogleDirectionsTransitLineVehicle {
+@objc public class PXGoogleDirectionsTransitLineVehicle: NSObject {
 	/// The name of the vehicle on a specific line, eg. "Subway."
-	public var name: String?
+	@objc public var name: String?
 	/// The type of vehicle that runs on a specific line
-	public var type: PXGoogleDirectionsVehicleType?
+    public var type: PXGoogleDirectionsVehicleType?
 	/// An icon associated with this vehicle type
-	public var icon: UIImage?
+	@objc public var icon: UIImage?
+    
+    init(name: String?, type: PXGoogleDirectionsVehicleType?, icon: UIImage?) {
+        self.name = name
+        self.type = type
+        self.icon = icon
+    }
 }
