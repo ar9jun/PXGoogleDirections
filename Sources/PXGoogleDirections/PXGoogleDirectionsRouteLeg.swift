@@ -51,6 +51,23 @@ import GoogleMaps
         return (dp.count() > 0 ? dp : nil)
     }
     
+    @objc public func getDistance() -> CLLocationDistance {
+        if let d = distance {
+            return d.distance!
+        }
+        
+        return 0.0
+    }
+    
+    @objc public func getDuration() -> TimeInterval {
+        if let d = duration {
+            return d.duration!
+        }
+        
+        return 0.0
+    }
+    
+    
     @objc public func getStartLocation() -> CLLocationCoordinate2D{
         if let s = startLocation {
             return s

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A702F0925FD70CC00A61045 /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A702F0725FD70CC00A61045 /* CoreLocation.swift */; };
+		2A702F0A25FD70CC00A61045 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A702F0825FD70CC00A61045 /* Polyline.swift */; };
 		7A083DDB1D2D71D900B42940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A083DDA1D2D71D900B42940 /* UIKit.framework */; };
 		7A083DEE1D2D723F00B42940 /* PXGoogleDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A083DDC1D2D723F00B42940 /* PXGoogleDirections.swift */; };
 		7A083DEF1D2D723F00B42940 /* PXGoogleDirectionsDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A083DDD1D2D723F00B42940 /* PXGoogleDirectionsDistance.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A702F0725FD70CC00A61045 /* CoreLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreLocation.swift; path = PXGoogleDirections/CoreLocation.swift; sourceTree = "<group>"; };
+		2A702F0825FD70CC00A61045 /* Polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Polyline.swift; path = PXGoogleDirections/Polyline.swift; sourceTree = "<group>"; };
 		7A083DD81D2D718F00B42940 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7A083DDA1D2D71D900B42940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A083DDC1D2D723F00B42940 /* PXGoogleDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PXGoogleDirections.swift; path = PXGoogleDirections/PXGoogleDirections.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				7A083DEC1D2D723F00B42940 /* PXTime.swift */,
 				7A083DED1D2D723F00B42940 /* PXUtils.swift */,
 				7A0985501D2D71120095737F /* PXGoogleDirections.h */,
+				2A702F0725FD70CC00A61045 /* CoreLocation.swift */,
+				2A702F0825FD70CC00A61045 /* Polyline.swift */,
 				7A0985521D2D71120095737F /* Info.plist */,
 			);
 			name = PXGoogleDirections;
@@ -249,6 +255,7 @@
 				7A083DFE1D2D723F00B42940 /* PXTime.swift in Sources */,
 				7A083DF71D2D723F00B42940 /* PXGoogleDirectionsRouteLegStepTransitDetails.swift in Sources */,
 				7A083DF31D2D723F00B42940 /* PXGoogleDirectionsRoute.swift in Sources */,
+				2A702F0925FD70CC00A61045 /* CoreLocation.swift in Sources */,
 				7A083DF11D2D723F00B42940 /* PXGoogleDirectionsEnums.swift in Sources */,
 				7A083DFC1D2D723F00B42940 /* PXGoogleDirectionsTransitLineVehicle.swift in Sources */,
 				7A083DFA1D2D723F00B42940 /* PXGoogleDirectionsTransitAgency.swift in Sources */,
@@ -259,6 +266,7 @@
 				7A083DF61D2D723F00B42940 /* PXGoogleDirectionsRouteLegStep.swift in Sources */,
 				7A083DFD1D2D723F00B42940 /* PXLocation.swift in Sources */,
 				7A083DF81D2D723F00B42940 /* PXGoogleDirectionsStop.swift in Sources */,
+				2A702F0A25FD70CC00A61045 /* Polyline.swift in Sources */,
 				7A083DEE1D2D723F00B42940 /* PXGoogleDirections.swift in Sources */,
 				7A083DF91D2D723F00B42940 /* PXGoogleDirectionsTime.swift in Sources */,
 			);
