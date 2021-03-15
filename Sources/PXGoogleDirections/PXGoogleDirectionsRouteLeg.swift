@@ -21,9 +21,9 @@ import GoogleMaps
     /// The total duration of this leg, taking into account current traffic conditions (the duration in traffic will only be returned if the directions request includes a departure_time parameter set to a value within a few minutes of the current time, traffic conditions are available for the requested route, and the directions request does not include stopover waypoints)
     public var durationInTraffic: PXGoogleDirectionsDuration?
     /// Estimated time of arrival for this leg (only available for transit directions)
-    public var arrivalTime: PXGoogleDirectionsTime?
+    @objc public var arrivalTime: PXGoogleDirectionsTime?
     /// Estimated time of departure for this leg (only available for transit directions)
-    public var departureTime: PXGoogleDirectionsTime?
+    @objc public var departureTime: PXGoogleDirectionsTime?
     /// Latitude/longitude coordinates of the origin of this leg (because the API calculates directions between locations by using the nearest transportation option - usually a road - at the start and end points, `startLocation` may be different than the provided origin of this leg if, for example, a road is not near the origin)
     public var startLocation: CLLocationCoordinate2D?
     /// Latitude/longitude coordinates of the origin of this leg (because the API calculates directions between locations by using the nearest transportation option - usually a road - at the start and end points, `endLocation` may be different than the provided destination of this leg if, for example, a road is not near the origin)
@@ -83,4 +83,6 @@ import GoogleMaps
         
         return CLLocationCoordinate2D(latitude: 0, longitude: 0)
     }
+    
+    
 }

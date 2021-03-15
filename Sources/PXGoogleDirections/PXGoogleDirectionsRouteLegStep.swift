@@ -86,5 +86,16 @@ import GoogleMaps
     @objc public func getStartCoordArray() -> [CLLocationDegrees] {
         return [startLocation!.latitude, startLocation!.longitude]
     }
+    
+    @objc public func decodePointList() -> [CLLocation] {
+        return decodePolyline(polyline!, precision: 1e5)!
+    }
+    
+    @objc public func decodePointList2D() -> [LocationCoordinate2D] {
+        return decodePolyline(polyline!, precision: 1e5)!
+    }
 
+    @objc public func getEncodedGeometry() -> String {
+        return encodeCoordinates(decodePointList2D(), precision: 1e5)
+    }
 }

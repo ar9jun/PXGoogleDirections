@@ -245,13 +245,15 @@ public typealias PXGoogleDirectionsRequestCompletionBlock = (PXGoogleDirectionsR
     @objc public func insertTransitMode(_ transitMode: PXGoogleDirectionsTransitMode) {
         self.transitModes.insert(transitMode)
     }
-    
+        
     @objc public func setLocation(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) {
         self.from = PXLocation.coordinateLocation(from)
         self.to = PXLocation.coordinateLocation(to)
-        
-        waypoints.append(self.from) //do we need this?
-        waypoints.append(self.to)
+    }
+    
+    @objc public func appendWaypoint(_ waypoint: CLLocationCoordinate2D) {
+        //only for waypoints that are not starting or ending location
+        self.waypoints.append(PXLocation.coordinateLocation(waypoint))
     }
     
     // MARK: Public functions
@@ -610,11 +612,12 @@ public typealias PXGoogleDirectionsRequestCompletionBlock = (PXGoogleDirectionsR
                             }
                         }
                     }
-                    // Sub-steps
-                    if let _ = s["steps"] as? [[String: AnyObject]] {
-                        currentStep.steps = handleSteps(s)
-                    }
                 }
+                // Sub-steps
+                if let _ = s["steps"] as? [[String: AnyObject]] {
+                    currentStep.steps = handleSteps(s)
+                }
+
                 // Add the step to results
                 results.append(currentStep)
             }

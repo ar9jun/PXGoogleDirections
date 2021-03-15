@@ -158,7 +158,15 @@ import GoogleMaps
         return marker
     }
     
-    @objc public func getEncodedGeometry() -> [CLLocation] {
-        return decodePolyline(overviewPolyline!)!
+    @objc public func decodePointList() -> [CLLocation] {
+        return decodePolyline(overviewPolyline!, precision: 1e5)!
+    }
+    
+    @objc public func decodePointList2D() -> [LocationCoordinate2D] {
+        return decodePolyline(overviewPolyline!, precision: 1e5)!
+    }
+
+    @objc public func getEncodedGeometry() -> String {
+        return encodeCoordinates(decodePointList2D(), precision: 1e6)
     }
 }
